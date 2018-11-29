@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width">
+
+<style> 
+#main {
+   
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+    #main {
+   
+        flex-direction: column;
+}
+
+#main > div {
+    margin-top: 30px;
+}
+
+#main > div:nth-child(1) {
+    margin-top: 0;
+}
+#main > div#myRedDIV {order: 4;}
+#main > div#myBlueDIV {order: 3;}
+#main > div#myGreenDIV {order: 2;}
+#main > div#myPinkDIV {order: 1;}
+
+
+}
+
+
+div#myRedDIV,div#myBlueDIV,div#myGreenDIV,div#myPinkDIV {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+
+    
+}
+/* Standard syntax */
+div#myRedDIV   {order: 1;}
+div#myBlueDIV  {order: 2;}
+div#myGreenDIV {order: 3;}
+div#myPinkDIV  {order: 4;}
+
+div:focus {
+    border: 2px solid black;
+}
+</style>
+</head>
+<body>
+<h1>The tabbed Property</h1>
+
+<h2>navigate thrpugh colors using tab</h2>
+
+<div id="main">
+  <div style="background-color:coral;" tabindex="0" id="myRedDIV"></div>
+  <div style="background-color:lightblue;" tabindex="0" id="myBlueDIV"></div>
+  <div style="background-color:lightgreen;" tabindex="0" id="myGreenDIV"></div>
+  <div style="background-color:pink;" tabindex="0" id="myPinkDIV"></div>
+</div>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the order property.</p>
+
+<p><b>Note:</b> Safari 6.1 (and newer) supports an alternative, the -webkit-order property.</p>
+
+</body>
+</html>
